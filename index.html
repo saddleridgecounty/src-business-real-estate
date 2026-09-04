@@ -2,30 +2,22 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>
-    Saddle Ridge County Business Real Estate
-  </title>
-
+  <title>Saddle Ridge County Business Real Estate</title>
 
   <!-- =====================================================
-       SOCIAL / DISCORD PREVIEW
-       You can add a custom preview image later.
+       DISCORD / SOCIAL PREVIEW
        ===================================================== -->
 
-  <meta property="og:type"
-        content="website">
+  <meta property="og:type" content="website">
 
   <meta property="og:title"
         content="Saddle Ridge County — Business Real Estate">
 
   <meta property="og:description"
-        content="View current business listings, purchase prices, county taxes, availability, and business ownership rules throughout Saddle Ridge County.">
+        content="Browse current Saddle Ridge County business listings, prices, taxes, availability, and ownership requirements.">
 
   <meta property="og:url"
         content="https://saddleridgecounty.github.io/src-business-real-estate/">
@@ -52,7 +44,6 @@
   <style>
 
     :root {
-
       --paper: #eadfbd;
       --paper-light: #f6eccf;
       --paper-deep: #d7c28e;
@@ -69,42 +60,32 @@
       --available: #3e5c35;
       --sold: #763c32;
       --soon: #87642b;
-
     }
-
 
     * {
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
-
       margin: 0;
-
       color: var(--ink);
-
       font-family: "Arvo", serif;
 
       background:
-
         radial-gradient(
           circle at 12% 8%,
           rgba(255,255,255,.28),
           transparent 24%
         ),
-
         radial-gradient(
           circle at 85% 35%,
           rgba(69,42,20,.05),
           transparent 28%
         ),
-
         repeating-linear-gradient(
           0deg,
           rgba(65,45,28,.018),
@@ -112,22 +93,16 @@
           transparent 1px,
           transparent 5px
         ),
-
         var(--paper);
-
     }
-
 
     a {
       color: inherit;
     }
 
-
-    button,
-    select {
+    button {
       font: inherit;
     }
-
 
 
     /* =====================================================
@@ -135,9 +110,7 @@
        ===================================================== */
 
     .top-strip {
-
       background: var(--wood-dark);
-
       color: #f5e8c4;
 
       padding: 8px 18px;
@@ -145,17 +118,13 @@
       text-align: center;
 
       font-family: "Special Elite", monospace;
-
       font-size: 11px;
 
       text-transform: uppercase;
-
       letter-spacing: 2px;
 
       border-bottom: 2px solid var(--gold);
-
     }
-
 
 
     /* =====================================================
@@ -163,33 +132,25 @@
        ===================================================== */
 
     .hero {
-
       text-align: center;
 
-      padding: 32px 20px 28px;
+      padding: 30px 20px 34px;
 
       border-bottom: 2px solid var(--ink);
-
     }
 
-
     .main-logo {
-
       width: min(760px, 94%);
-
       max-height: 360px;
 
       object-fit: contain;
 
       display: block;
 
-      margin: 0 auto 14px;
-
+      margin: 0 auto 12px;
     }
 
-
     .hero-kicker {
-
       font-family: "Special Elite", monospace;
 
       text-transform: uppercase;
@@ -199,12 +160,9 @@
       font-size: 13px;
 
       margin-top: 5px;
-
     }
 
-
     .hero-title {
-
       margin: 10px 0 0;
 
       font-family: "Rye", serif;
@@ -212,12 +170,9 @@
       font-size: clamp(28px, 4vw, 46px);
 
       text-transform: uppercase;
-
     }
 
-
     .hero-copy {
-
       max-width: 850px;
 
       margin: 18px auto 0;
@@ -229,14 +184,10 @@
       line-height: 1.7;
 
       font-size: 15px;
-
     }
 
-
     .western-rule {
-
       width: 320px;
-
       max-width: 70%;
 
       margin: 21px auto;
@@ -246,13 +197,10 @@
       align-items: center;
 
       gap: 10px;
-
     }
-
 
     .western-rule::before,
     .western-rule::after {
-
       content: "";
 
       flex: 1;
@@ -260,70 +208,136 @@
       height: 1px;
 
       background: var(--ink);
-
     }
-
 
     .western-rule span {
-
       color: var(--gold);
-
     }
-
 
 
     /* =====================================================
-       NOTICE
+       APPLICATION CTA
        ===================================================== */
 
-    .buyer-notice {
+    .application-box {
+      max-width: 820px;
 
-      max-width: 780px;
+      margin: 28px auto 0;
 
-      margin: 24px auto 0;
+      padding: 24px 28px;
 
-      padding: 18px 25px;
+      background:
+        linear-gradient(
+          rgba(255,255,255,.10),
+          rgba(255,255,255,.10)
+        ),
+        var(--paper-light);
 
       border: 2px solid var(--ink);
 
-      outline: 1px solid rgba(33,23,17,.28);
+      outline:
+        1px solid rgba(33,23,17,.25);
 
-      outline-offset: -6px;
+      outline-offset: -7px;
 
-      background: rgba(246,236,207,.58);
-
+      box-shadow:
+        4px 5px 0 rgba(33,23,17,.08);
     }
 
-
-    .buyer-notice strong {
-
-      display: block;
+    .application-box h2 {
+      margin: 0 0 10px;
 
       font-family: "Rye", serif;
 
+      font-size: clamp(22px, 3vw, 29px);
+
       text-transform: uppercase;
-
-      font-size: 18px;
-
-      margin-bottom: 7px;
-
     }
 
+    .application-box p {
+      max-width: 650px;
 
-    .buyer-notice p {
-
-      margin: 0;
+      margin: 0 auto 18px;
 
       font-family: "Special Elite", monospace;
 
-      line-height: 1.6;
-
-      font-size: 14px;
+      line-height: 1.65;
 
       color: var(--ink-soft);
 
+      font-size: 14px;
     }
 
+    .application-actions {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    .apply-button,
+    .rules-button {
+      display: inline-block;
+
+      padding: 12px 20px;
+
+      text-decoration: none;
+
+      text-transform: uppercase;
+
+      font-family: "Special Elite", monospace;
+
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+      font-size: 12px;
+
+      border: 2px solid var(--ink);
+
+      transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .apply-button {
+      background: var(--wood-dark);
+
+      color: #f5e8c4;
+    }
+
+    .rules-button {
+      background: transparent;
+
+      color: var(--ink);
+    }
+
+    .apply-button:hover,
+    .rules-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .apply-button:hover {
+      background: #3b2417;
+    }
+
+    .rules-button:hover {
+      background: rgba(33,23,17,.08);
+    }
+
+    .application-note {
+      margin-top: 14px;
+
+      font-family: "Special Elite", monospace;
+
+      font-size: 11px;
+
+      color: var(--ink-soft);
+    }
 
 
     /* =====================================================
@@ -331,26 +345,26 @@
        ===================================================== */
 
     nav {
-
       position: sticky;
 
       top: 0;
 
       z-index: 30;
 
-      background: rgba(234,223,189,.97);
+      background:
+        rgba(234,223,189,.97);
 
-      border-bottom: 2px solid var(--ink);
+      border-bottom:
+        2px solid var(--ink);
 
-      box-shadow: 0 3px 9px rgba(0,0,0,.09);
+      box-shadow:
+        0 3px 9px rgba(0,0,0,.09);
 
-      backdrop-filter: blur(4px);
-
+      backdrop-filter:
+        blur(4px);
     }
 
-
     .nav-inner {
-
       max-width: 1200px;
 
       margin: auto;
@@ -366,17 +380,16 @@
       flex-wrap: wrap;
 
       gap: 5px;
-
     }
 
-
     .nav-inner a {
-
       padding: 7px 9px;
 
       text-decoration: none;
 
-      font-family: "Special Elite", monospace;
+      font-family:
+        "Special Elite",
+        monospace;
 
       text-transform: uppercase;
 
@@ -384,19 +397,16 @@
 
       font-size: 11px;
 
-      border: 1px solid transparent;
-
+      border:
+        1px solid transparent;
     }
-
 
     .nav-inner a:hover {
-
       border-color: var(--ink);
 
-      background: rgba(255,255,255,.17);
-
+      background:
+        rgba(255,255,255,.17);
     }
-
 
 
     /* =====================================================
@@ -404,15 +414,12 @@
        ===================================================== */
 
     main {
-
       max-width: 1200px;
 
       margin: auto;
 
       padding: 40px 20px 80px;
-
     }
-
 
 
     /* =====================================================
@@ -420,22 +427,19 @@
        ===================================================== */
 
     .summary {
-
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
       gap: 14px;
 
       max-width: 820px;
 
       margin: 0 auto 40px;
-
     }
 
-
     .summary-card {
-
       text-align: center;
 
       background: var(--paper-light);
@@ -444,38 +448,33 @@
 
       padding: 18px 10px;
 
-      box-shadow: 2px 3px 0 rgba(33,23,17,.07);
-
+      box-shadow:
+        2px 3px 0 rgba(33,23,17,.07);
     }
 
-
     .summary-number {
-
       display: block;
 
       font-family: "Rye", serif;
 
       font-size: 27px;
-
     }
 
-
     .summary-label {
-
       display: block;
 
       margin-top: 4px;
 
-      font-family: "Special Elite", monospace;
+      font-family:
+        "Special Elite",
+        monospace;
 
       text-transform: uppercase;
 
       font-size: 10px;
 
       letter-spacing: 1.2px;
-
     }
-
 
 
     /* =====================================================
@@ -483,14 +482,15 @@
        ===================================================== */
 
     .listing-tools {
-
       padding: 19px;
 
       margin-bottom: 45px;
 
-      border-top: 1px solid var(--ink);
+      border-top:
+        1px solid var(--ink);
 
-      border-bottom: 1px solid var(--ink);
+      border-bottom:
+        1px solid var(--ink);
 
       display: flex;
 
@@ -501,53 +501,48 @@
       align-items: center;
 
       gap: 12px;
-
     }
 
-
     .filter-label {
-
-      font-family: "Special Elite", monospace;
+      font-family:
+        "Special Elite",
+        monospace;
 
       text-transform: uppercase;
 
       letter-spacing: 1px;
 
       font-size: 11px;
-
     }
 
-
     .filter-button {
-
       cursor: pointer;
 
-      border: 1px solid var(--ink);
+      border:
+        1px solid var(--ink);
 
-      background: transparent;
+      background:
+        transparent;
 
       color: var(--ink);
 
       padding: 8px 12px;
 
-      font-family: "Special Elite", monospace;
+      font-family:
+        "Special Elite",
+        monospace;
 
       text-transform: uppercase;
 
       font-size: 11px;
-
     }
-
 
     .filter-button:hover,
     .filter-button.active {
-
       background: var(--wood-dark);
 
       color: var(--paper-light);
-
     }
-
 
 
     /* =====================================================
@@ -555,25 +550,18 @@
        ===================================================== */
 
     .town {
-
       margin-bottom: 76px;
 
       scroll-margin-top: 80px;
-
     }
 
-
     .town-header {
-
       text-align: center;
 
       margin-bottom: 25px;
-
     }
 
-
     .town-logo {
-
       max-width: 480px;
 
       width: min(88%, 480px);
@@ -585,35 +573,29 @@
       display: block;
 
       margin: 0 auto 10px;
-
     }
-
 
     .town-logo.hidden {
-
       display: none;
-
     }
 
-
     .town-title {
-
       margin: 0;
 
       font-family: "Rye", serif;
 
-      font-size: clamp(28px, 4vw, 40px);
+      font-size:
+        clamp(28px, 4vw, 40px);
 
       text-transform: uppercase;
-
     }
 
-
     .town-subtitle {
-
       margin-top: 4px;
 
-      font-family: "Special Elite", monospace;
+      font-family:
+        "Special Elite",
+        monospace;
 
       text-transform: uppercase;
 
@@ -622,24 +604,21 @@
       color: var(--ink-soft);
 
       font-size: 11px;
-
     }
 
-
     .town-rule {
-
       width: 280px;
 
       max-width: 65%;
 
       border: 0;
 
-      border-top: 1px solid var(--ink);
+      border-top:
+        1px solid var(--ink);
 
-      margin: 15px auto 0;
-
+      margin:
+        15px auto 0;
     }
-
 
 
     /* =====================================================
@@ -647,19 +626,15 @@
        ===================================================== */
 
     .listings {
-
       display: grid;
 
       grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
       gap: 17px;
-
     }
 
-
     .listing {
-
       position: relative;
 
       display: flex;
@@ -670,44 +645,44 @@
 
       padding: 18px;
 
-      background: var(--paper-light);
+      background:
+        var(--paper-light);
 
-      border: 1px solid var(--ink);
+      border:
+        1px solid var(--ink);
 
       box-shadow:
         3px 4px 0 rgba(33,23,17,.075);
 
       overflow: hidden;
-
     }
 
-
     .listing::before {
-
       content: "";
 
       position: absolute;
 
       inset: 6px;
 
-      border: 1px solid rgba(33,23,17,.18);
+      border:
+        1px solid rgba(33,23,17,.18);
 
       pointer-events: none;
-
     }
 
-
     .status {
-
       align-self: flex-start;
 
       margin-bottom: 13px;
 
       padding: 5px 9px;
 
-      border: 2px solid currentColor;
+      border:
+        2px solid currentColor;
 
-      font-family: "Special Elite", monospace;
+      font-family:
+        "Special Elite",
+        monospace;
 
       font-size: 11px;
 
@@ -722,31 +697,23 @@
       position: relative;
 
       z-index: 1;
-
     }
-
 
     .status.available {
       color: var(--available);
     }
 
-
     .status.sold {
-
       color: var(--sold);
 
       opacity: .82;
-
     }
-
 
     .status.coming-soon {
       color: var(--soon);
     }
 
-
     .listing h3 {
-
       position: relative;
 
       z-index: 1;
@@ -756,19 +723,18 @@
       font-family: "Rye", serif;
 
       font-size: 24px;
-
     }
 
-
     .listing-town {
-
       position: relative;
 
       z-index: 1;
 
       margin-bottom: 16px;
 
-      font-family: "Special Elite", monospace;
+      font-family:
+        "Special Elite",
+        monospace;
 
       text-transform: uppercase;
 
@@ -777,141 +743,146 @@
       color: var(--ink-soft);
 
       font-size: 11px;
-
     }
 
-
     .business-image {
-
       width: 100%;
 
       height: 170px;
 
       object-fit: contain;
 
-      margin: 0 0 15px;
+      margin:
+        0 0 15px;
 
       position: relative;
 
       z-index: 1;
-
     }
 
-
     .money-row {
-
       position: relative;
 
       z-index: 1;
 
       display: flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
-      align-items: baseline;
+      align-items:
+        baseline;
 
       gap: 15px;
 
       padding: 8px 0;
 
-      border-top: 1px dashed rgba(33,23,17,.35);
-
+      border-top:
+        1px dashed rgba(33,23,17,.35);
     }
-
 
     .money-row:first-of-type {
       margin-top: auto;
     }
 
-
     .money-label {
+      font-family:
+        "Special Elite",
+        monospace;
 
-      font-family: "Special Elite", monospace;
+      text-transform:
+        uppercase;
 
-      text-transform: uppercase;
+      letter-spacing:
+        1px;
 
-      letter-spacing: 1px;
+      font-size:
+        10px;
 
-      font-size: 10px;
-
-      color: var(--ink-soft);
-
+      color:
+        var(--ink-soft);
     }
-
 
     .money-value {
+      font-family:
+        "Arvo",
+        serif;
 
-      font-family: "Arvo", serif;
+      font-weight:
+        bold;
 
-      font-weight: bold;
+      font-size:
+        17px;
 
-      font-size: 17px;
-
-      white-space: nowrap;
-
+      white-space:
+        nowrap;
     }
-
 
     .notes {
+      position:
+        relative;
 
-      position: relative;
+      z-index:
+        1;
 
-      z-index: 1;
+      margin-top:
+        12px;
 
-      margin-top: 12px;
+      padding-top:
+        10px;
 
-      padding-top: 10px;
+      border-top:
+        1px solid rgba(33,23,17,.22);
 
-      border-top: 1px solid rgba(33,23,17,.22);
+      font-family:
+        "Special Elite",
+        monospace;
 
-      font-family: "Special Elite", monospace;
+      color:
+        var(--ink-soft);
 
-      color: var(--ink-soft);
+      font-size:
+        13px;
 
-      font-size: 13px;
-
-      line-height: 1.55;
-
+      line-height:
+        1.55;
     }
-
 
     .label-code {
+      position:
+        relative;
 
-      position: relative;
+      z-index:
+        1;
 
-      z-index: 1;
+      margin-top:
+        10px;
 
-      margin-top: 10px;
+      color:
+        rgba(33,23,17,.35);
 
-      color: rgba(33,23,17,.35);
+      font-family:
+        "Special Elite",
+        monospace;
 
-      font-family: "Special Elite", monospace;
+      font-size:
+        9px;
 
-      font-size: 9px;
+      text-transform:
+        uppercase;
 
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
+      letter-spacing:
+        1px;
     }
 
-
-
-    /* =====================================================
-       SOLD LISTINGS
-       ===================================================== */
-
     .listing[data-status="SOLD"] {
-
       background:
         linear-gradient(
           rgba(110,80,60,.055),
           rgba(110,80,60,.055)
         ),
         var(--paper-light);
-
     }
-
 
 
     /* =====================================================
@@ -919,154 +890,177 @@
        ===================================================== */
 
     .rules {
+      scroll-margin-top:
+        80px;
 
-      scroll-margin-top: 80px;
+      margin-top:
+        75px;
 
-      margin-top: 75px;
+      padding-top:
+        40px;
 
-      padding-top: 40px;
-
-      border-top: 3px double var(--ink);
-
+      border-top:
+        3px double var(--ink);
     }
-
 
     .rules-heading {
+      text-align:
+        center;
 
-      text-align: center;
-
-      margin-bottom: 30px;
-
+      margin-bottom:
+        30px;
     }
-
 
     .rules-heading h2 {
+      margin:
+        0;
 
-      margin: 0;
+      font-family:
+        "Rye",
+        serif;
 
-      font-family: "Rye", serif;
-
-      font-size: clamp(30px, 4vw, 44px);
-
+      font-size:
+        clamp(30px, 4vw, 44px);
     }
-
 
     .rules-heading p {
+      max-width:
+        800px;
 
-      max-width: 800px;
+      margin:
+        12px auto 0;
 
-      margin: 12px auto 0;
+      font-family:
+        "Special Elite",
+        monospace;
 
-      font-family: "Special Elite", monospace;
+      color:
+        var(--ink-soft);
 
-      color: var(--ink-soft);
-
-      line-height: 1.6;
-
+      line-height:
+        1.6;
     }
-
 
     .rules-grid {
+      display:
+        grid;
 
-      display: grid;
+      grid-template-columns:
+        repeat(2, 1fr);
 
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 18px;
-
+      gap:
+        18px;
     }
-
 
     .rule-card {
+      background:
+        rgba(246,236,207,.60);
 
-      background: rgba(246,236,207,.60);
+      border:
+        1px solid var(--line);
 
-      border: 1px solid var(--line);
-
-      padding: 23px;
-
+      padding:
+        23px;
     }
-
 
     .rule-card h3 {
+      margin:
+        0 0 12px;
 
-      margin: 0 0 12px;
+      font-family:
+        "Rye",
+        serif;
 
-      font-family: "Rye", serif;
-
-      font-size: 21px;
-
+      font-size:
+        21px;
     }
-
 
     .rule-card ul {
+      margin:
+        0;
 
-      margin: 0;
+      padding-left:
+        21px;
 
-      padding-left: 21px;
+      color:
+        var(--ink-soft);
 
-      color: var(--ink-soft);
+      line-height:
+        1.55;
 
-      line-height: 1.55;
-
-      font-size: 14px;
-
+      font-size:
+        14px;
     }
-
 
     .rule-card li {
-      margin: 5px 0;
+      margin:
+        5px 0;
     }
-
 
     .rules-important {
+      margin-top:
+        22px;
 
-      margin-top: 22px;
+      padding:
+        22px;
 
-      padding: 22px;
+      border:
+        2px solid var(--ink);
 
-      border: 2px solid var(--ink);
+      text-align:
+        center;
 
-      text-align: center;
+      font-family:
+        "Special Elite",
+        monospace;
 
-      font-family: "Special Elite", monospace;
+      line-height:
+        1.65;
 
-      line-height: 1.65;
-
-      background: var(--paper-light);
-
+      background:
+        var(--paper-light);
     }
-
 
     .rules-important strong {
+      font-family:
+        "Rye",
+        serif;
 
-      font-family: "Rye", serif;
+      font-size:
+        18px;
 
-      font-size: 18px;
-
-      text-transform: uppercase;
-
+      text-transform:
+        uppercase;
     }
 
+    .bottom-apply {
+      text-align:
+        center;
+
+      margin-top:
+        26px;
+    }
 
 
     /* =====================================================
-       LOADING
+       LOADING / ERROR
        ===================================================== */
 
     #loading,
     #error {
+      padding:
+        60px 20px;
 
-      padding: 60px 20px;
+      text-align:
+        center;
 
-      text-align: center;
+      font-family:
+        "Special Elite",
+        monospace;
 
-      font-family: "Special Elite", monospace;
-
-      color: var(--ink-soft);
-
+      color:
+        var(--ink-soft);
     }
-
 
 
     /* =====================================================
@@ -1074,45 +1068,51 @@
        ===================================================== */
 
     footer {
+      background:
+        var(--wood-dark);
 
-      background: var(--wood-dark);
+      color:
+        #f5e8c4;
 
-      color: #f5e8c4;
+      text-align:
+        center;
 
-      text-align: center;
+      padding:
+        30px 20px;
 
-      padding: 30px 20px;
-
-      border-top: 3px double var(--gold);
-
+      border-top:
+        3px double var(--gold);
     }
-
 
     .footer-title {
+      font-family:
+        "Rye",
+        serif;
 
-      font-family: "Rye", serif;
+      text-transform:
+        uppercase;
 
-      text-transform: uppercase;
+      font-size:
+        22px;
 
-      font-size: 22px;
-
-      margin-bottom: 8px;
-
+      margin-bottom:
+        8px;
     }
-
 
     .footer-copy {
+      font-family:
+        "Special Elite",
+        monospace;
 
-      font-family: "Special Elite", monospace;
+      font-size:
+        12px;
 
-      font-size: 12px;
+      line-height:
+        1.6;
 
-      line-height: 1.6;
-
-      opacity: .88;
-
+      opacity:
+        .88;
     }
-
 
 
     /* =====================================================
@@ -1122,53 +1122,57 @@
     @media (max-width: 900px) {
 
       .listings {
-
         grid-template-columns:
           repeat(2, minmax(0, 1fr));
-
       }
 
-
       .rules-grid {
-
-        grid-template-columns: 1fr;
-
+        grid-template-columns:
+          1fr;
       }
 
     }
 
-
     @media (max-width: 650px) {
 
       .summary {
-
-        grid-template-columns: 1fr;
-
+        grid-template-columns:
+          1fr;
       }
-
 
       .listings {
-
-        grid-template-columns: 1fr;
-
+        grid-template-columns:
+          1fr;
       }
-
 
       .nav-inner {
+        justify-content:
+          flex-start;
 
-        justify-content: flex-start;
+        flex-wrap:
+          nowrap;
 
-        flex-wrap: nowrap;
-
-        overflow-x: auto;
-
+        overflow-x:
+          auto;
       }
 
-
       .nav-inner a {
+        white-space:
+          nowrap;
+      }
 
-        white-space: nowrap;
+      .application-actions {
+        flex-direction:
+          column;
 
+        align-items:
+          stretch;
+      }
+
+      .apply-button,
+      .rules-button {
+        width:
+          100%;
       }
 
     }
@@ -1178,12 +1182,11 @@
 </head>
 
 
-
 <body>
 
 
 <!-- =======================================================
-     TOP
+     TOP STRIP
      ======================================================= -->
 
 <div class="top-strip">
@@ -1192,7 +1195,6 @@
   • Business Real Estate Office
 
 </div>
-
 
 
 <!-- =======================================================
@@ -1234,35 +1236,70 @@
   <div class="hero-copy">
 
     Browse businesses currently available,
-    sold, or coming soon throughout
-    Saddle Ridge County.
+    sold, or coming soon throughout Saddle Ridge County.
 
-    Purchase prices, county taxes and
-    listing status are maintained through
-    the County Business Real Estate Office.
+    Purchase prices, county taxes and listing status
+    are maintained through the County Business Real Estate Office.
 
   </div>
 
 
-  <div class="buyer-notice">
+  <!-- =====================================================
+       APPLICATION
+       ===================================================== -->
 
-    <strong>
-      Interested in Owning a Business?
-    </strong>
+  <div class="application-box">
+
+    <h2>
+
+      ★ Ready to Own a Business? ★
+
+    </h2>
 
     <p>
 
       Review the current listings and
-      Business Ownership Rules & Regulations
-      before applying for a property.
+      Business Ownership Rules & Regulations before applying.
+
+      Once you have found a business you are interested in,
+      submit your application through the
+      Saddle Ridge County Discord.
 
     </p>
+
+    <div class="application-actions">
+
+      <a
+        href="https://discord.com/channels/1248752819776000171/1520447617165951188"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="apply-button">
+
+        Apply for a Business
+
+      </a>
+
+      <a
+        href="#rules"
+        class="rules-button">
+
+        Read Ownership Rules
+
+      </a>
+
+    </div>
+
+    <div class="application-note">
+
+      You must be a member of the Saddle Ridge County Discord
+      and have access to the application channel.
+
+    </div>
 
   </div>
 
 
 </header>
-
 
 
 <!-- =======================================================
@@ -1302,13 +1339,21 @@
     </a>
 
     <a href="#rules">
-      Rules & Regulations
+      Rules
+    </a>
+
+    <a
+      href="https://discord.com/channels/1248752819776000171/1520447617165951188"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      Apply
+
     </a>
 
   </div>
 
 </nav>
-
 
 
 <!-- =======================================================
@@ -1325,11 +1370,14 @@
   </div>
 
 
-  <div id="content"
-       style="display:none;">
+  <div
+    id="content"
+    style="display:none;">
 
 
-    <!-- SUMMARY -->
+    <!-- ===================================================
+         SUMMARY
+         =================================================== -->
 
     <section class="summary">
 
@@ -1338,11 +1386,15 @@
         <span
           id="availableCount"
           class="summary-number">
+
           0
+
         </span>
 
         <span class="summary-label">
+
           Available
+
         </span>
 
       </div>
@@ -1353,11 +1405,15 @@
         <span
           id="comingSoonCount"
           class="summary-number">
+
           0
+
         </span>
 
         <span class="summary-label">
+
           Coming Soon
+
         </span>
 
       </div>
@@ -1368,11 +1424,15 @@
         <span
           id="soldCount"
           class="summary-number">
+
           0
+
         </span>
 
         <span class="summary-label">
+
           Sold
+
         </span>
 
       </div>
@@ -1380,14 +1440,18 @@
     </section>
 
 
-
-    <!-- FILTERS -->
+    <!-- ===================================================
+         FILTERS
+         =================================================== -->
 
     <section class="listing-tools">
 
       <span class="filter-label">
+
         Show:
+
       </span>
+
 
       <button
         type="button"
@@ -1431,9 +1495,7 @@
     </section>
 
 
-
     <div id="townListings"></div>
-
 
 
     <!-- ===================================================
@@ -1448,25 +1510,24 @@
       <div class="rules-heading">
 
         <h2>
+
           Business Ownership Rules & Regulations
+
         </h2>
 
         <p>
 
-          To maintain a fair, balanced and immersive
-          economy, all business owners are expected to
-          follow the rules outlined below.
+          To maintain a fair, balanced and immersive economy,
+          all business owners are expected to follow the rules
+          outlined below.
 
         </p>
 
       </div>
 
 
-
       <div class="rules-grid">
 
-
-        <!-- OWNERSHIP -->
 
         <article class="rule-card">
 
@@ -1477,29 +1538,24 @@
           <ul>
 
             <li>
-              48 hours of playtime on the SRC server
-              are required before a business can be owned.
+              48 hours of playtime on the SRC server are required
+              before a business can be owned.
             </li>
 
             <li>
-              Each player may own one (1) business per
-              account, regardless of the number of
-              characters they possess.
+              Each player may own one (1) business per account,
+              regardless of the number of characters they possess.
             </li>
 
             <li>
-              Businesses may not be transferred between
-              alternate characters on the same account
-              to bypass this rule.
+              Businesses may not be transferred between alternate
+              characters on the same account to bypass this rule.
             </li>
 
           </ul>
 
         </article>
 
-
-
-        <!-- PAYMENTS -->
 
         <article class="rule-card">
 
@@ -1510,46 +1566,39 @@
           <ul>
 
             <li>
-              Business owners are responsible for making
-              all required business payments on time
-              and in full.
+              Business owners are responsible for making all required
+              business payments on time and in full.
             </li>
 
             <li>
-              If you are unable to make a scheduled
-              payment, communicate with County
-              Administration as soon as possible.
+              If you are unable to make a scheduled payment,
+              communicate with County Administration as soon as possible.
             </li>
 
             <li>
-              Two consecutive missed payments without
-              communication will place the business
-              in default.
+              Two consecutive missed payments without communication
+              will place the business in default.
             </li>
 
             <li>
-              Businesses in default may be repossessed
-              by the Saddle Ridge County Government and
-              returned to the market.
+              Businesses in default may be repossessed by the
+              Saddle Ridge County Government and returned to the market.
             </li>
 
             <li>
-              Payment concerns may be reviewed
+              Communication is key. Payment concerns may be reviewed
               case-by-case when communicated in advance.
             </li>
 
             <li>
-              Repeated late or missed payments may result
-              in a review of business ownership.
+              Repeated late or missed payments may result in a review
+              of business ownership.
             </li>
 
           </ul>
 
         </article>
 
-
-
-        <!-- ACTIVITY -->
 
         <article class="rule-card">
 
@@ -1560,42 +1609,41 @@
           <ul>
 
             <li>
-              Business owners are expected to remain
-              reasonably active and involved in operating
-              their business.
+              Business owners are expected to remain reasonably active
+              and involved in the operation of their business.
             </li>
 
             <li>
-              If there is no business activity and no
-              communication with County Administration
-              for 14 consecutive days, the business will
-              be considered abandoned.
+              If there is no business activity and no communication
+              with County Administration for 14 consecutive days,
+              the business will be considered abandoned.
             </li>
 
             <li>
-              Abandoned businesses may be repossessed
-              and placed back on the market.
+              Abandoned businesses may be repossessed and placed
+              back on the market.
             </li>
 
             <li>
-              If you know you will be away for an
-              extended period, communicate with County
-              Administration.
+              If you know you will be away or unable to operate your
+              business for an extended period, communicate with
+              County Administration.
             </li>
 
             <li>
-              Communication regarding an absence may
-              prevent repossession; extended absences may
-              still be reviewed case-by-case.
+              Communication regarding an absence may prevent repossession;
+              however, extended absences may still be reviewed case-by-case.
+            </li>
+
+            <li>
+              Businesses should not be held indefinitely by inactive owners
+              when other citizens are interested in actively operating them.
             </li>
 
           </ul>
 
         </article>
 
-
-
-        <!-- EMPLOYEES -->
 
         <article class="rule-card">
 
@@ -1606,30 +1654,25 @@
           <ul>
 
             <li>
-              Business owners are encouraged to hire
-              other players to help operate their
-              business.
+              Business owners are encouraged to hire other players
+              to help operate their business.
             </li>
 
             <li>
-              Employees help create immersive roleplay,
-              provide customer service and keep
-              businesses active when the owner is
-              unavailable.
+              Employees help create immersive roleplay, provide
+              customer service and ensure businesses remain active
+              even when the owner is unavailable.
             </li>
 
             <li>
-              Business owners are responsible for
-              managing and supervising their staff.
+              Business owners are responsible for managing and
+              supervising their staff.
             </li>
 
           </ul>
 
         </article>
 
-
-
-        <!-- MERCHANDISE -->
 
         <article class="rule-card">
 
@@ -1640,24 +1683,19 @@
           <ul>
 
             <li>
-              Businesses may sell goods and products
-              crafted by that business, with the
-              exception of General Store owners.
+              Businesses may sell goods and products crafted by the
+              business, with the exception of General Store owners.
             </li>
 
             <li>
-              Businesses may sell raw materials and
-              supplies directly related to the operation
-              of that business.
+              Businesses may sell raw materials and supplies directly
+              related to the operation of that business.
             </li>
 
           </ul>
 
         </article>
 
-
-
-        <!-- SELLING -->
 
         <article class="rule-card">
 
@@ -1668,44 +1706,39 @@
           <ul>
 
             <li>
-              Business owners may choose to sell their
-              business back to the County.
+              Business owners may choose to sell their business
+              back to the County.
             </li>
 
             <li>
-              Businesses sold back to Saddle Ridge County
-              will receive 50% of the original purchase
-              price.
+              Businesses sold back to Saddle Ridge County will receive
+              50% of the original purchase price.
             </li>
 
             <li>
-              Improvements, inventory and customizations
-              are not included in reimbursement unless
-              otherwise approved.
+              Improvements, inventory and customizations are not included
+              in reimbursement unless otherwise approved.
             </li>
 
             <li>
-              Business owners may not privately sell
-              their business to another player.
+              Business owners may not privately sell their business
+              to another player.
             </li>
 
             <li>
-              All sales must go through the Saddle Ridge
-              County Real Estate Office.
+              All business sales must go through the Saddle Ridge County
+              Real Estate Office.
             </li>
 
             <li>
-              A business owner may hand their business
-              over to another player at no cost.
+              A business owner may hand their business over to another
+              player at no cost.
             </li>
 
           </ul>
 
         </article>
 
-
-
-        <!-- WHITELISTED GROUPS -->
 
         <article class="rule-card">
 
@@ -1716,9 +1749,8 @@
           <ul>
 
             <li>
-              Approved whitelisted families and gangs may
-              collectively own one (1) business of each
-              business category.
+              Approved whitelisted families and gangs may collectively
+              own one (1) business of each business category.
             </li>
 
             <li>
@@ -1726,24 +1758,20 @@
             </li>
 
             <li>
-              Ownership limits apply to the organization
-              as a whole, not individual members.
+              Ownership limits apply to the organization as a whole,
+              not individual members.
             </li>
 
             <li>
-              County Administration reserves the right to
-              deny or revoke ownership when these limits
-              are abused or used to monopolize the County
-              economy.
+              County Administration reserves the right to deny or revoke
+              ownership if these limits are abused or used to monopolize
+              the County economy.
             </li>
 
           </ul>
 
         </article>
 
-
-
-        <!-- STANDARD ASSETS -->
 
         <article class="rule-card">
 
@@ -1770,10 +1798,9 @@
             </li>
 
             <li>
-              Additional equipment, upgrades,
-              decorations or specialty crafting stations
-              may be available depending on the type of
-              business or future County expansions.
+              Additional equipment, upgrades, decorations or specialty
+              crafting stations may be available depending on the type
+              of business or future County expansions.
             </li>
 
           </ul>
@@ -1784,7 +1811,6 @@
       </div>
 
 
-
       <div class="rules-important">
 
         <strong>
@@ -1793,11 +1819,25 @@
 
         <br><br>
 
-        Circumstances happen. If you are having trouble
-        making payments, remaining active, or operating
-        your business, communicate with County
-        Administration before the issue becomes a default
-        or repossession matter.
+        Circumstances happen. If you are having trouble making payments,
+        remaining active, or operating your business, communicate with
+        County Administration before the issue becomes a default or
+        repossession matter.
+
+      </div>
+
+
+      <div class="bottom-apply">
+
+        <a
+          href="https://discord.com/channels/1248752819776000171/1520447617165951188"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="apply-button">
+
+          Apply for a Business
+
+        </a>
 
       </div>
 
@@ -1809,7 +1849,6 @@
 
 
 </main>
-
 
 
 <!-- =======================================================
@@ -1827,13 +1866,14 @@
   <div class="footer-copy">
 
     Business Real Estate Office
+
     <br>
-    Official County Property Listings
+
+    Official County Business Listings
 
   </div>
 
 </footer>
-
 
 
 <script>
@@ -1847,20 +1887,8 @@ const sheetURL =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vTpSMKuT-JCXrFdXOQYtwG8ETzM8zP5FElBoIKxHc7l1KGScCKMeSL64_4VC_SrCRPmvWYtPRwcxzYc/pub?gid=0&single=true&output=csv";
 
 
-
 /* =======================================================
    TOWN LOGOS
-
-   Upload these to /images/
-
-   Blackwater.png
-   Valentine.png
-   Strawberry.png
-   Rhodes.png
-   Armadillo.png
-   St-Denis.png
-   Annesburg.png
-   Tumbleweed.png
    ======================================================= */
 
 const townLogos = {
@@ -1893,7 +1921,6 @@ const townLogos = {
     "Tumbleweed.png"
 
 };
-
 
 
 /* =======================================================
@@ -1934,7 +1961,6 @@ function parseCSV(text) {
 
     }
 
-
     else if (
       char === '"'
     ) {
@@ -1943,7 +1969,6 @@ function parseCSV(text) {
         !quoted;
 
     }
-
 
     else if (
       char === "," &&
@@ -1955,7 +1980,6 @@ function parseCSV(text) {
       cell = "";
 
     }
-
 
     else if (
       (
@@ -1991,10 +2015,10 @@ function parseCSV(text) {
 
 
       row = [];
+
       cell = "";
 
     }
-
 
     else {
 
@@ -2030,33 +2054,6 @@ function parseCSV(text) {
   return rows;
 
 }
-
-
-
-/* =======================================================
-   SLUG
-   ======================================================= */
-
-function slugify(text) {
-
-  return text
-
-    .toLowerCase()
-
-    .trim()
-
-    .replace(
-      /[^a-z0-9]+/g,
-      "-"
-    )
-
-    .replace(
-      /^-|-$/g,
-      ""
-    );
-
-}
-
 
 
 /* =======================================================
@@ -2096,13 +2093,11 @@ function getStatusClass(status) {
 }
 
 
-
 /* =======================================================
-   LOAD DATA
+   LOAD LISTINGS
    ======================================================= */
 
 async function loadListings() {
-
 
   try {
 
@@ -2130,6 +2125,17 @@ async function loadListings() {
 
     const rows =
       parseCSV(csv);
+
+
+    if (
+      rows.length < 2
+    ) {
+
+      throw new Error(
+        "No listing data found."
+      );
+
+    }
 
 
     const headers =
@@ -2181,6 +2187,7 @@ async function loadListings() {
 
 
     const towns = {};
+
 
     const statusTotals = {
 
@@ -2332,7 +2339,6 @@ async function loadListings() {
 
   }
 
-
   catch(error) {
 
 
@@ -2353,7 +2359,6 @@ async function loadListings() {
   }
 
 }
-
 
 
 /* =======================================================
@@ -2391,7 +2396,6 @@ function renderSummary(
       totals.SOLD || 0;
 
 }
-
 
 
 /* =======================================================
@@ -2599,7 +2603,6 @@ function renderTowns(
 }
 
 
-
 /* =======================================================
    LISTING CARD
    ======================================================= */
@@ -2645,7 +2648,6 @@ function createListingCard(
   );
 
 
-
   if (
     listing.image
   ) {
@@ -2665,6 +2667,10 @@ function createListingCard(
       "images/" +
       encodeURIComponent(
         listing.image
+      )
+      .replace(
+        /%2F/g,
+        "/"
       );
 
 
@@ -2692,7 +2698,6 @@ function createListingCard(
   }
 
 
-
   const title =
     document.createElement(
       "h3"
@@ -2706,7 +2711,6 @@ function createListingCard(
   card.appendChild(
     title
   );
-
 
 
   const town =
@@ -2728,7 +2732,6 @@ function createListingCard(
   );
 
 
-
   const purchaseRow =
     createMoneyRow(
       "Purchase Price",
@@ -2741,7 +2744,6 @@ function createListingCard(
   );
 
 
-
   const taxRow =
     createMoneyRow(
       "County Tax",
@@ -2752,7 +2754,6 @@ function createListingCard(
   card.appendChild(
     taxRow
   );
-
 
 
   if (
@@ -2779,7 +2780,6 @@ function createListingCard(
     );
 
   }
-
 
 
   if (
@@ -2812,7 +2812,6 @@ function createListingCard(
   return card;
 
 }
-
 
 
 /* =======================================================
@@ -2876,7 +2875,6 @@ function createMoneyRow(
   return row;
 
 }
-
 
 
 /* =======================================================
@@ -2943,7 +2941,6 @@ function setupFilters() {
 
                   }
 
-
                   else {
 
                     card.style.display =
@@ -2999,7 +2996,6 @@ function setupFilters() {
     );
 
 }
-
 
 
 /* =======================================================
