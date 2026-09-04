@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Saddle Ridge County Business Real Estate</title>
+
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #efe3c2;
+      color: #2f2418;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 25px;
+      border-bottom: 3px solid #4b3825;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    #loading {
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Saddle Ridge County</h1>
+  <p>Business Real Estate Listings</p>
+</header>
+
+<main>
+
+  <div id="loading">
+    Loading business listings...
+  </div>
+
+</main>
+
+<script>
+
+const sheetURL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vTpSMKuT-JCXrFdXOQYtwG8ETzM8zP5FElBoIKxHc7l1KGScCKMeSL64_4VC_SrCRPmvWYtPRwcxzYc/pub?gid=0&single=true&output=csv";
+
+async function loadListings() {
+
+  try {
+
+    const response = await fetch(sheetURL);
+
+    if (!response.ok) {
+      throw new Error("Could not load Google Sheet.");
+    }
+
+    const csv = await response.text();
+
+    console.log(csv);
+
+    document.getElementById("loading").innerHTML =
+      "Google Sheet connected successfully.";
+
+  }
+
+  catch(error) {
+
+    document.getElementById("loading").innerHTML =
+      "Unable to load business listings.";
+
+    console.error(error);
+
+  }
+
+}
+
+loadListings();
+
+</script>
+
+</body>
+
+</html>
