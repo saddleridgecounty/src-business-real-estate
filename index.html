@@ -607,7 +607,7 @@
     }
 
     .rule-card li {
-      margin: 5px 0;
+      margin: 8px 0;
     }
 
     .rule-warning {
@@ -759,13 +759,11 @@
   </div>
 
   <div class="hero-copy">
-
     Browse businesses currently available, sold, or coming soon
     throughout Saddle Ridge County.
 
-    Purchase prices, county taxes and listing status are maintained
+    Purchase prices, monthly taxes and listing status are maintained
     through the County Business Real Estate Office.
-
   </div>
 
 
@@ -776,13 +774,11 @@
     </h2>
 
     <p>
-
       Review the current listings and Business Ownership Rules &
       Regulations before applying.
 
       Once you have found a business you are interested in,
       submit your application through the Saddle Ridge County Discord.
-
     </p>
 
     <div class="application-actions">
@@ -792,26 +788,18 @@
         target="_blank"
         rel="noopener noreferrer"
         class="apply-button">
-
         Apply for a Business
-
       </a>
 
-      <a
-        href="#rules"
-        class="rules-button">
-
+      <a href="#rules" class="rules-button">
         Read Ownership Rules
-
       </a>
 
     </div>
 
     <div class="application-note">
-
       You must be a member of the Saddle Ridge County Discord
       and have access to the application channel.
-
     </div>
 
   </div>
@@ -876,9 +864,7 @@
 
     <section class="listing-tools">
 
-      <span class="filter-label">
-        Show:
-      </span>
+      <span class="filter-label">Show:</span>
 
       <button type="button"
               class="filter-button active"
@@ -941,18 +927,36 @@
           <ul>
 
             <li>
-              48 hours of playtime on the SRC server are required
-              before a business can be owned.
+              <strong>48 Hours Required —</strong>
+              A character must have at least
+              <strong>48 hours of playtime on the SRC server</strong>
+              before they are eligible to own a business.
             </li>
 
             <li>
-              Each player may own one (1) business per account,
-              regardless of the number of characters they possess.
+              <strong>One Business Per Character —</strong>
+              Each player may own
+              <strong>one (1) business per character.</strong>
+              Players with multiple characters may own a business
+              on each eligible character.
             </li>
 
             <li>
-              Businesses may not be transferred between alternate
-              characters on the same account to bypass this rule.
+              <strong>Activity Requirements Still Apply —</strong>
+              Owning businesses on multiple characters does not waive
+              or reduce the Business Activity requirements.
+              <strong>Each business must remain reasonably active.</strong>
+              If a business has no activity for
+              <strong>14 consecutive days</strong> and there has been
+              no communication with County Administration, that business
+              may be considered abandoned and repossessed.
+            </li>
+
+            <li>
+              <strong>No Holding Businesses —</strong>
+              Alternate characters may not be used simply to hold
+              or reserve businesses. Each business should be actively
+              operated and contribute to roleplay within the county.
             </li>
 
           </ul>
@@ -1053,12 +1057,13 @@
 
             <li>
               Business owners are expected to remain reasonably active
-              and involved in the operation of their business.
+              and involved in the operation of each business they own.
             </li>
 
             <li>
               If there is no business activity and no communication
-              with County Administration for 14 consecutive days,
+              with County Administration for
+              <strong>14 consecutive days</strong>,
               the business will be considered abandoned.
             </li>
 
@@ -1338,6 +1343,12 @@
         or need assistance with a business change, please communicate
         with County Administration or the Business Real Estate Office.
 
+        <br><br>
+
+        Owning more than one business across multiple characters means
+        you are responsible for maintaining activity at
+        <strong>each individual business.</strong>
+
       </div>
 
 
@@ -1417,11 +1428,7 @@ function parseCSV(text) {
     const char = text[i];
     const next = text[i + 1];
 
-    if (
-      char === '"' &&
-      quoted &&
-      next === '"'
-    ) {
+    if (char === '"' && quoted && next === '"') {
 
       cell += '"';
       i++;
@@ -1434,35 +1441,22 @@ function parseCSV(text) {
 
     }
 
-    else if (
-      char === "," &&
-      !quoted
-    ) {
+    else if (char === "," && !quoted) {
 
       row.push(cell);
       cell = "";
 
     }
 
-    else if (
-      (char === "\n" || char === "\r") &&
-      !quoted
-    ) {
+    else if ((char === "\n" || char === "\r") && !quoted) {
 
-      if (
-        char === "\r" &&
-        next === "\n"
-      ) {
+      if (char === "\r" && next === "\n") {
         i++;
       }
 
       row.push(cell);
 
-      if (
-        row.some(
-          value => value.trim() !== ""
-        )
-      ) {
+      if (row.some(value => value.trim() !== "")) {
         rows.push(row);
       }
 
@@ -1479,18 +1473,11 @@ function parseCSV(text) {
 
   }
 
-  if (
-    cell.length ||
-    row.length
-  ) {
+  if (cell.length || row.length) {
 
     row.push(cell);
 
-    if (
-      row.some(
-        value => value.trim() !== ""
-      )
-    ) {
+    if (row.some(value => value.trim() !== "")) {
       rows.push(row);
     }
 
@@ -1553,9 +1540,7 @@ async function loadListings() {
     }
 
     const headers =
-      rows[0].map(
-        value => value.trim()
-      );
+      rows[0].map(value => value.trim());
 
     const townIndex =
       headers.indexOf("Town");
@@ -1643,12 +1628,8 @@ async function loadListings() {
       towns[town].push(listing);
 
 
-      if (
-        statusTotals[listing.status] !== undefined
-      ) {
-
+      if (statusTotals[listing.status] !== undefined) {
         statusTotals[listing.status]++;
-
       }
 
     });
