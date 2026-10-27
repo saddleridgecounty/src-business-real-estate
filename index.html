@@ -1,26 +1,1531 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Saddle Ridge County business real estate listings and ownership regulations."><title>SRC | Business Real Estate</title><link href="https://fonts.googleapis.com/css2?family=Rye&family=Libre+Baskerville:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet"><style>
-:root{--ink:#2b1b12;--paper:#e7cfa4;--cream:#f8e8c7;--copper:#b46c35;--dark:#21140f;--teal:#356d68}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:repeating-linear-gradient(90deg,#25170f,#382115 18px,#29170f 36px);color:var(--ink);font:16px/1.65 'Libre Baskerville',Georgia,serif}a{color:inherit}header{background:linear-gradient(135deg,#1b110d,#442617 50%,#1b110d);border-bottom:8px double #bd7b3e;color:var(--cream);text-align:center;padding:42px 18px 34px}header .eyebrow{color:#dca567;letter-spacing:.24em;font:13px 'Special Elite',serif;text-transform:uppercase}h1,h2,h3{font-family:'Rye',Georgia,serif;font-weight:400;line-height:1.3}h1{font-size:clamp(29px,5vw,54px);margin:18px auto;max-width:1000px;color:#f3cb8b;text-shadow:2px 3px #120c09}header p{margin:0 auto;max-width:740px}nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px auto 0}nav a,.btn{display:inline-block;text-decoration:none;background:#382117;color:#f8e8c7;border:1px solid #c18b51;padding:10px 16px;font:14px 'Special Elite',serif;cursor:pointer}nav a:hover,.btn:hover{background:#784523}main{width:min(1180px,calc(100% - 28px));margin:30px auto 65px;background:linear-gradient(135deg,#f3dfb8,#e2c393);border:10px ridge #83502a;box-shadow:0 20px 35px #0a0605;padding:clamp(18px,4vw,48px)}section{scroll-margin-top:18px;margin:0 0 48px}h2{text-align:center;font-size:clamp(25px,3.5vw,38px);color:#572b18;border-bottom:2px solid #996037;padding-bottom:15px}h3{font-size:19px;color:#5b2c19;margin-top:24px}.intro{text-align:center;max-width:800px;margin:0 auto 24px}.notice{padding:16px 20px;border:2px solid #a56d3e;background:#f7e8ca;margin:20px 0}.notice strong{color:#743219}.warning{border-left:6px solid #8e321d}.controls{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:20px 0}select,input{background:#fff4db;border:2px solid #87522c;padding:11px;color:#2d1c14;font:15px Georgia,serif;min-width:180px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:20px}.property{background:#f8e9c9;border:3px double #916039;box-shadow:3px 5px 0 #9d764b;padding:18px}.property h3{margin:5px 0 12px;font-size:20px}.tag{display:inline-block;background:#345f59;color:white;padding:3px 10px;font:12px 'Special Elite',serif}.tag.unavailable{background:#763b2b}.property dl{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;margin:12px 0}.property dt{font-weight:bold}.property dd{margin:0;text-align:right}.property p{overflow-wrap:anywhere}.rules{display:grid;gap:18px}.rule{padding:19px 22px;background:#f5e4c1;border:1px solid #a67848;border-left:5px solid #7e4929}.rule h3{margin:0 0 12px}.rule ul{padding-left:23px;margin:10px 0}.rule li{margin:7px 0}.small{font-size:13px}.muted{color:#624e3e}footer{color:#eed4a9;text-align:center;padding:0 18px 40px;font:14px 'Special Elite',serif}#listingStatus{text-align:center}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #167d88;outline-offset:3px}@media(max-width:650px){main{border-width:5px}nav a{flex:1 1 40%;text-align:center}.property dl{grid-template-columns:1fr}.property dd{text-align:left;margin-bottom:5px}}
-</style></head><body>
-<header><div class="eyebrow">Established 1895 · Saddle Ridge County</div><h1>Business Real Estate Office</h1><p>Find your place on the frontier. Build a business, serve your community, and leave your legacy.</p><nav aria-label="Site navigation"><a href="#listings">Available Businesses</a><a href="#requirements">Ownership Requirements</a><a href="#rules">Rules & Regulations</a><a href="#contact">Contact the Office</a></nav></header>
-<main><section id="listings"><h2>Business Listings</h2><p class="intro">Browse county establishments. Listings are loaded from the official Business Real Estate Google Sheet.</p><div class="controls"><label>Town <select id="town"><option value="">All Towns</option></select></label><label>Status <select id="status"><option value="">All Statuses</option><option value="available">Available</option><option value="sold">Sold / Unavailable</option></select></label><label>Search <input id="search" type="search" placeholder="Business name or town"></label></div><p id="listingStatus" role="status">Loading business listings…</p><div id="properties" class="grid"></div></section>
-<section id="requirements"><h2>Before You Purchase</h2><div class="notice"><strong>Eligibility:</strong> You must have been in the county for at least <strong>48 hours of playtime</strong>, meet the profession-training requirements, and receive approval from the SRC Business Real Estate Office. Each character may own <strong>one business at a time, following the county multijob guidelines</strong>.</div><div class="rules"><article class="rule"><h3>Profession Training — Required</h3><ul><li>Before purchasing, work with an existing business in your chosen profession for <strong>one week</strong>.</li><li>Complete a minimum of <strong>8 hours</strong> of work in that profession during the training week.</li><li>The supervising business owner must provide proof or verification of completed training to the Business Real Estate Office.</li><li>Training and verification must be completed <strong>before purchase approval</strong>.</li><li>If you cannot find a business to train under, open a ticket and communicate with the office so alternatives can be discussed.</li></ul></article></div></section>
-<section id="rules"><h2>Business Rules & Regulations</h2><p class="intro">All business owners and prospective buyers are responsible for understanding and following county policies.</p><div class="rules">
-<article class="rule"><h3>01 · Business Ownership & Activity</h3><ul><li>Each character may own <strong>one business at a time, following the county multijob guidelines</strong>.</li><li>Businesses must remain active and operated in good faith.</li><li><strong>7 consecutive days of inactivity without communication</strong> may result in repossession.</li><li>If you will be away for more than a week, submit a support ticket to the Real Estate Office.</li><li>Business taxes are <strong>10% of the business cost every 30 days</strong>, automatically deducted from the tax ledger; insufficient funds may result in the business being locked.</li><li>Business loans are not offered.</li></ul></article>
-<article class="rule"><h3>02 · Communication & Abandonment</h3><p>Real life comes first. If you are taking a break, cannot operate your business, or are leaving the county, <strong>communicate with the Business Real Estate Office through a support ticket</strong>.</p><div class="notice warning"><strong>Permanent ownership ineligibility:</strong> An owner who abandons a business without communication and has it repossessed as a result will no longer be eligible to own a business in Saddle Ridge County. This is separate from the 90-day restriction for voluntarily relinquishing a third business.</div></article>
-<article class="rule"><h3>03 · Products & Merchandise</h3><ul><li>Businesses may sell goods crafted by their own profession.</li><li>Businesses may sell raw materials and supplies directly related to their business operations.</li><li>General Stores have additional approved merchandise options, subject to the restrictions below.</li><li><strong>All businesses may sell Trapper trade goods</strong>, except the <strong>tanning rack</strong>, which may only be sold by General Stores.</li><li>Do not buy large quantities of another owner's products to resell at substantially higher or lower prices. Unauthorized resale of this kind violates county business rules.</li></ul><p><strong>Purpose:</strong> Protect our player-driven economy and preserve a meaningful role for every profession.</p></article>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saddle Ridge County Business Real Estate</title>
+<!-- SOCIAL / DISCORD PREVIEW -->
+<meta content="website" property="og:type"/>
+<meta content="Saddle Ridge County — Business Real Estate" property="og:title"/>
+<meta content="Browse current Saddle Ridge County business listings, prices, taxes, availability, and ownership requirements." property="og:description"/>
+<meta content="https://saddleridgecounty.github.io/src-business-real-estate/" property="og:url"/>
+<meta content="https://saddleridgecounty.github.io/src-business-real-estate/images/business-real-estate-preview.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="#2b190f" name="theme-color"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Saddle Ridge County — Business Real Estate" name="twitter:title"/>
+<meta content="Browse current Saddle Ridge County business listings, prices, taxes, availability, and ownership requirements." name="twitter:description"/>
+<meta content="https://saddleridgecounty.github.io/src-business-real-estate/images/business-real-estate-preview.png" name="twitter:image"/>
+<!-- WESTERN FONTS -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&amp;family=Rye&amp;family=Special+Elite&amp;display=swap" rel="stylesheet"/>
+<style>
+
+    :root {
+      --paper: #eadfbd;
+      --paper-light: #f6eccf;
+      --ink: #211711;
+      --ink-soft: #5f4d3b;
+      --wood: #3b2417;
+      --wood-dark: #25140c;
+      --gold: #9d7135;
+      --line: #766248;
+      --available: #3e5c35;
+      --sold: #763c32;
+      --soon: #87642b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Arvo", serif;
+
+      background:
+        radial-gradient(
+          circle at 12% 8%,
+          rgba(255,255,255,.28),
+          transparent 24%
+        ),
+        radial-gradient(
+          circle at 85% 35%,
+          rgba(69,42,20,.05),
+          transparent 28%
+        ),
+        repeating-linear-gradient(
+          0deg,
+          rgba(65,45,28,.018),
+          rgba(65,45,28,.018) 1px,
+          transparent 1px,
+          transparent 5px
+        ),
+        var(--paper);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* TOP STRIP */
+
+    .top-strip {
+      background: var(--wood-dark);
+      color: #f5e8c4;
+      padding: 8px 18px;
+      text-align: center;
+      font-family: "Special Elite", monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 30px 20px 34px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .main-logo {
+      width: min(760px, 94%);
+      max-height: 360px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 12px;
+    }
+
+    .hero-kicker {
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .hero-title {
+      margin: 10px 0 0;
+      font-family: "Rye", serif;
+      font-size: clamp(28px, 4vw, 46px);
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 850px;
+      margin: 18px auto 0;
+      font-family: "Special Elite", monospace;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .western-rule {
+      width: 320px;
+      max-width: 70%;
+      margin: 21px auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .western-rule::before,
+    .western-rule::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--ink);
+    }
+
+    .western-rule span {
+      color: var(--gold);
+    }
+
+    /* APPLICATION */
+
+    .application-box {
+      max-width: 820px;
+      margin: 28px auto 0;
+      padding: 24px 28px;
+      background: var(--paper-light);
+      border: 2px solid var(--ink);
+      outline: 1px solid rgba(33,23,17,.25);
+      outline-offset: -7px;
+      box-shadow: 4px 5px 0 rgba(33,23,17,.08);
+    }
+
+    .application-box h2 {
+      margin: 0 0 10px;
+      font-family: "Rye", serif;
+      font-size: clamp(22px, 3vw, 29px);
+      text-transform: uppercase;
+    }
+
+    .application-box p {
+      max-width: 650px;
+      margin: 0 auto 18px;
+      font-family: "Special Elite", monospace;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      font-size: 14px;
+    }
+
+    .application-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .apply-button,
+    .rules-button {
+      display: inline-block;
+      padding: 12px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Special Elite", monospace;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 12px;
+      border: 2px solid var(--ink);
+      transition: .2s ease;
+    }
+
+    .apply-button {
+      background: var(--wood-dark);
+      color: #f5e8c4;
+    }
+
+    .rules-button {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .apply-button:hover,
+    .rules-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .rules-button:hover {
+      background: rgba(33,23,17,.08);
+    }
+
+    .application-note {
+      margin-top: 14px;
+      font-family: "Special Elite", monospace;
+      font-size: 11px;
+      color: var(--ink-soft);
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(234,223,189,.97);
+      border-bottom: 2px solid var(--ink);
+      box-shadow: 0 3px 9px rgba(0,0,0,.09);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .nav-inner a {
+      padding: 7px 9px;
+      text-decoration: none;
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      font-size: 11px;
+      border: 1px solid transparent;
+    }
+
+    .nav-inner a:hover {
+      border-color: var(--ink);
+      background: rgba(255,255,255,.17);
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* SUMMARY */
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 820px;
+      margin: 0 auto 40px;
+    }
+
+    .summary-card {
+      text-align: center;
+      background: var(--paper-light);
+      border: 1px solid var(--ink);
+      padding: 18px 10px;
+      box-shadow: 2px 3px 0 rgba(33,23,17,.07);
+    }
+
+    .summary-number {
+      display: block;
+      font-family: "Rye", serif;
+      font-size: 27px;
+    }
+
+    .summary-label {
+      display: block;
+      margin-top: 4px;
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 1.2px;
+    }
+
+    /* FILTERS */
+
+    .listing-tools {
+      padding: 19px;
+      margin-bottom: 45px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .filter-label {
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+    }
+
+    .filter-button {
+      cursor: pointer;
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      padding: 8px 12px;
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .filter-button:hover,
+    .filter-button.active {
+      background: var(--wood-dark);
+      color: var(--paper-light);
+    }
+
+    /* TOWNS */
+
+    .town {
+      margin-bottom: 76px;
+      scroll-margin-top: 80px;
+    }
+
+    .town-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .town-logo {
+      max-width: 480px;
+      width: min(88%, 480px);
+      max-height: 250px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .town-logo.hidden {
+      display: none;
+    }
+
+    .town-title {
+      margin: 0;
+      font-family: "Rye", serif;
+      font-size: clamp(28px, 4vw, 40px);
+      text-transform: uppercase;
+    }
+
+    .town-subtitle {
+      margin-top: 4px;
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ink-soft);
+      font-size: 11px;
+    }
+
+    .town-rule {
+      width: 280px;
+      max-width: 65%;
+      border: 0;
+      border-top: 1px solid var(--ink);
+      margin: 15px auto 0;
+    }
+
+    /* LISTINGS */
+
+    .listings {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .listing {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 250px;
+      padding: 18px;
+      background: var(--paper-light);
+      border: 1px solid var(--ink);
+      box-shadow: 3px 4px 0 rgba(33,23,17,.075);
+      overflow: hidden;
+    }
+
+    .listing::before {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(33,23,17,.18);
+      pointer-events: none;
+    }
+
+    .status {
+      align-self: flex-start;
+      margin-bottom: 13px;
+      padding: 5px 9px;
+      border: 2px solid currentColor;
+      font-family: "Special Elite", monospace;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      transform: rotate(-1deg);
+      position: relative;
+      z-index: 1;
+    }
+
+    .status.available {
+      color: var(--available);
+    }
+
+    .status.sold {
+      color: var(--sold);
+    }
+
+    .status.coming-soon {
+      color: var(--soon);
+    }
+
+    .listing h3 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 4px;
+      font-family: "Rye", serif;
+      font-size: 24px;
+    }
+
+    .listing-town {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 16px;
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--ink-soft);
+      font-size: 11px;
+    }
+
+    .business-image {
+      width: 100%;
+      height: 170px;
+      object-fit: contain;
+      margin: 0 0 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .money-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 15px;
+      padding: 8px 0;
+      border-top: 1px dashed rgba(33,23,17,.35);
+    }
+
+    .money-row:first-of-type {
+      margin-top: auto;
+    }
+
+    .money-label {
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 10px;
+      color: var(--ink-soft);
+    }
+
+    .money-value {
+      font-weight: bold;
+      font-size: 17px;
+      white-space: nowrap;
+    }
+
+    .notes {
+      position: relative;
+      z-index: 1;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,23,17,.22);
+      font-family: "Special Elite", monospace;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .label-code {
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+      color: rgba(33,23,17,.35);
+      font-family: "Special Elite", monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* RULES */
+
+    .rules {
+      scroll-margin-top: 80px;
+      margin-top: 75px;
+      padding-top: 40px;
+      border-top: 3px double var(--ink);
+    }
+
+    .rules-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .rules-heading h2 {
+      margin: 0;
+      font-family: "Rye", serif;
+      font-size: clamp(30px, 4vw, 44px);
+    }
+
+    .rules-heading p {
+      max-width: 800px;
+      margin: 12px auto 0;
+      font-family: "Special Elite", monospace;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .rule-card {
+      background: rgba(246,236,207,.60);
+      border: 1px solid var(--line);
+      padding: 23px;
+    }
+
+    .rule-card h3 {
+      margin: 0 0 12px;
+      font-family: "Rye", serif;
+      font-size: 21px;
+    }
+
+    .rule-card h4 {
+      margin: 18px 0 8px;
+      font-family: "Special Elite", monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    .rule-card ul {
+      margin: 0;
+      padding-left: 21px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .rule-card li {
+      margin: 8px 0;
+    }
+
+    .rule-warning {
+      margin-top: 14px;
+      padding: 13px;
+      border: 1px dashed var(--sold);
+      font-family: "Special Elite", monospace;
+      color: var(--sold);
+      line-height: 1.55;
+    }
+
+    .tax-highlight {
+      margin-top: 14px;
+      padding: 14px;
+      background: rgba(157,113,53,.09);
+      border: 1px dashed var(--gold);
+      font-family: "Special Elite", monospace;
+      line-height: 1.55;
+    }
+
+    .rules-important {
+      margin-top: 22px;
+      padding: 22px;
+      border: 2px solid var(--ink);
+      text-align: center;
+      font-family: "Special Elite", monospace;
+      line-height: 1.65;
+      background: var(--paper-light);
+    }
+
+    .rules-important strong {
+      font-family: "Rye", serif;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .bottom-apply {
+      text-align: center;
+      margin-top: 26px;
+    }
+
+    #loading,
+    #error {
+      padding: 60px 20px;
+      text-align: center;
+      font-family: "Special Elite", monospace;
+      color: var(--ink-soft);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--wood-dark);
+      color: #f5e8c4;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 3px double var(--gold);
+    }
+
+    .footer-title {
+      font-family: "Rye", serif;
+      text-transform: uppercase;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .footer-copy {
+      font-family: "Special Elite", monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      opacity: .88;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .listings {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .rules-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      .listings {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+
+      .nav-inner a {
+        white-space: nowrap;
+      }
+
+      .application-actions {
+        flex-direction: column;
+      }
+
+      .apply-button,
+      .rules-button {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+<style>
+/* Updated policies: isolated from the original town and listing styles */
+#requirements, #rules { scroll-margin-top:85px; margin:60px auto 35px; max-width:1100px; }
+#requirements h2, #rules h2 { font-family:"Rye",serif; font-weight:400; text-align:center; font-size:clamp(27px,4vw,39px); margin:0 0 18px; }
+#requirements .intro, #rules .intro { text-align:center; font-family:"Special Elite",monospace; line-height:1.65; color:var(--ink-soft); max-width:800px; margin:0 auto 24px; }
+#requirements .notice, #rules .notice { background:var(--paper-light); border:1px solid var(--line); border-left:5px solid var(--gold); padding:17px 21px; line-height:1.65; margin:16px 0; }
+#requirements .warning, #rules .warning { border-left-color:var(--sold); }
+#requirements .rules, #rules .rules { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:0; padding:0; border:0; }
+#requirements .rule, #rules .rule { background:rgba(246,236,207,.72); border:1px solid var(--line); border-left:5px solid var(--gold); padding:22px; min-width:0; }
+#requirements .rule h3, #rules .rule h3 { font-family:"Rye",serif; font-size:20px; font-weight:400; margin:0 0 13px; line-height:1.35; }
+#requirements .rule p, #rules .rule p { font-size:14px; line-height:1.7; }
+#requirements .rule ul, #rules .rule ul { padding-left:21px; margin:8px 0; color:var(--ink-soft); font-size:14px; line-height:1.6; }
+#requirements .rule li, #rules .rule li { margin:8px 0; }
+#requirements strong, #rules strong { color:var(--ink); }
+#rules { border-top:3px double var(--ink); padding-top:35px; }
+@media(max-width:750px) { #requirements .rules, #rules .rules { grid-template-columns:1fr; } }
+</style></head>
+<body>
+<div class="top-strip">
+  Saddle Ridge County Government • Business Real Estate Office
+</div>
+<header class="hero">
+<img alt="Saddle Ridge County Business Real Estate" class="main-logo" onerror="this.style.display='none'" src="images/SRC_BusinessRealEstate.png"/>
+<div class="hero-kicker">
+    Saddle Ridge County
+  </div>
+<h1 class="hero-title">
+    Business Real Estate Listings
+  </h1>
+<div class="western-rule">
+<span>★</span>
+</div>
+<div class="hero-copy">
+    Browse businesses currently available, sold, or coming soon
+    throughout Saddle Ridge County.
+
+    Purchase prices, monthly taxes and listing status are maintained
+    through the County Business Real Estate Office.
+  </div>
+<div class="application-box">
+<h2>
+      ★ Ready to Own a Business? ★
+    </h2>
+<p>
+      Review the current listings and Business Ownership Rules &amp;
+      Regulations before applying.
+
+      Once you have found a business you are interested in,
+      submit your application through the Saddle Ridge County Discord.
+    </p>
+<div class="application-actions">
+<a class="apply-button" href="https://discord.com/channels/1248752819776000171/1520447617165951188" rel="noopener noreferrer" target="_blank">
+        Apply for a Business
+      </a>
+<a class="rules-button" href="#rules">
+        Read Ownership Rules
+      </a>
+</div>
+<div class="application-note">
+      You must be a member of the Saddle Ridge County Discord
+      and have access to the application channel.
+    </div>
+</div>
+</header>
+<nav>
+<div class="nav-inner">
+<a href="#listings-top">Listings</a>
+<a href="#Blackwater">Blackwater</a>
+<a href="#Valentine">Valentine</a>
+<a href="#Strawberry">Strawberry</a>
+<a href="#Rhodes">Rhodes</a>
+<a href="#Armadillo">Armadillo</a>
+<a href="#St-Denis">St. Denis</a>
+<a href="#requirements">Requirements</a><a href="#rules">Rules</a>
+<a href="https://discord.com/channels/1248752819776000171/1520447617165951188" rel="noopener noreferrer" target="_blank">
+      Apply
+    </a>
+</div>
+</nav>
+<main id="listings-top">
+<div id="loading">
+    Opening the County Real Estate Ledger...
+  </div>
+<div id="content" style="display:none;">
+<section class="summary">
+<div class="summary-card">
+<span class="summary-number" id="availableCount">0</span>
+<span class="summary-label">Available</span>
+</div>
+<div class="summary-card">
+<span class="summary-number" id="comingSoonCount">0</span>
+<span class="summary-label">Coming Soon</span>
+</div>
+<div class="summary-card">
+<span class="summary-number" id="soldCount">0</span>
+<span class="summary-label">Sold</span>
+</div>
+</section>
+<section class="listing-tools">
+<span class="filter-label">Show:</span>
+<button class="filter-button active" data-filter="ALL" type="button">
+        All Listings
+      </button>
+<button class="filter-button" data-filter="AVAILABLE" type="button">
+        Available
+      </button>
+<button class="filter-button" data-filter="COMING SOON" type="button">
+        Coming Soon
+      </button>
+<button class="filter-button" data-filter="SOLD" type="button">
+        Sold
+      </button>
+</section>
+<div id="townListings"></div>
+<!-- BUSINESS RULES -->
+<section id="requirements"><h2>Before You Purchase</h2><div class="notice"><strong>Eligibility:</strong> You must have been in the county for at least <strong>48 hours of playtime</strong>, meet the profession-training requirements, and receive approval from the SRC Business Real Estate Office. Each character may own <strong>one business at a time, following the county multijob guidelines</strong>.</div><div class="rules"><article class="rule"><h3>Profession Training — Required</h3><ul><li>Before purchasing, work with an existing business in your chosen profession for <strong>one week</strong>.</li><li>Complete a minimum of <strong>8 hours</strong> of work in that profession during the training week.</li><li>The supervising business owner must provide proof or verification of completed training to the Business Real Estate Office.</li><li>Training and verification must be completed <strong>before purchase approval</strong>.</li><li>If you cannot find a business to train under, open a ticket and communicate with the office so alternatives can be discussed.</li></ul></article></div></section><section id="rules"><h2>Business Rules &amp; Regulations</h2><p class="intro">All business owners and prospective buyers are responsible for understanding and following county policies.</p><div class="rules">
+<article class="rule"><h3>01 · Business Ownership &amp; Activity</h3><ul><li>Each character may own <strong>one business at a time, following the county multijob guidelines</strong>.</li><li>Businesses must remain active and operated in good faith.</li><li><strong>7 consecutive days of inactivity without communication</strong> may result in repossession.</li><li>If you will be away for more than a week, submit a support ticket to the Real Estate Office.</li><li>Business taxes are <strong>10% of the business cost every 30 days</strong>, automatically deducted from the tax ledger; insufficient funds may result in the business being locked.</li><li>Business loans are not offered.</li></ul></article>
+<article class="rule"><h3>02 · Communication &amp; Abandonment</h3><p>Real life comes first. If you are taking a break, cannot operate your business, or are leaving the county, <strong>communicate with the Business Real Estate Office through a support ticket</strong>.</p><div class="notice warning"><strong>Permanent ownership ineligibility:</strong> An owner who abandons a business without communication and has it repossessed as a result will no longer be eligible to own a business in Saddle Ridge County. This is separate from the 90-day restriction for voluntarily relinquishing a third business.</div></article>
+<article class="rule"><h3>03 · Products &amp; Merchandise</h3><ul><li>Businesses may sell goods crafted by their own profession.</li><li>Businesses may sell raw materials and supplies directly related to their business operations.</li><li>General Stores have additional approved merchandise options, subject to the restrictions below.</li><li><strong>All businesses may sell Trapper trade goods</strong>, except the <strong>tanning rack</strong>, which may only be sold by General Stores.</li><li>Do not buy large quantities of another owner's products to resell at substantially higher or lower prices. Unauthorized resale of this kind violates county business rules.</li></ul><p><strong>Purpose:</strong> Protect our player-driven economy and preserve a meaningful role for every profession.</p></article>
 <article class="rule"><h3>04 · General Store Rules</h3><ul><li>General Stores may sell their approved crafted and merchandise items.</li><li><strong>No guns or gun parts.</strong> These belong to Gunsmiths.</li><li>General Stores may arrange to sell products from other businesses <strong>with the original owner's permission and consent</strong>, subject to profession restrictions.</li><li>Products exclusive to <strong>Saloons, Cafés, Bakeries, and Butchers</strong> may <strong>not</strong> be resold by General Stores.</li></ul><p>Support your local General Stores and the other hardworking business owners across the county.</p></article>
 <article class="rule"><h3>05 · Selling Back to the County</h3><ul><li>Owners may sell their business back to Saddle Ridge County for <strong>50% of the original purchase price</strong>.</li><li>Improvements, inventory, and customizations are excluded from reimbursement unless otherwise approved.</li><li><strong>Before the buyback process starts</strong>, remove all money from your business ledger and take everything you wish to keep out of business storage. <strong>Any items or money left behind will be lost and cannot be recovered.</strong></li></ul></article>
-<article class="rule"><h3>06 · Private Business Sales & Transfers</h3><ul><li>Owners <strong>may privately sell</strong> a business to another player.</li><li>The price of the business itself <strong>cannot exceed its current official listing price</strong>.</li><li>Inventory may be sold separately for an additional agreed-upon amount.</li><li><strong>Every sale must go through the SRC Business Real Estate Office.</strong></li><li>The new owner must be approved by the office and meet applicable ownership requirements.</li><li>The selling owner must hire the prospective buyer and allow them to work at the business for <strong>at least 8 hours</strong> before the transfer. These hours can count toward the one-week profession-training requirement if properly completed and verified.</li><li><strong>An SRC representative must be present on the day of the sale</strong> to oversee and finalize the transfer.</li><li>No private handover or agreement is official until approved and recorded by the office.</li></ul></article>
-<article class="rule"><h3>07 · Changing Businesses & the Three-Business Rule</h3><ul><li>New owners must remain at their establishment for at least <strong>two weeks</strong> before requesting relocation or a change of business.</li><li>Business changes require office approval; the county buyback remains 50% of the original purchase price and the new business is purchased at full price.</li><li>If a player has owned <strong>three different businesses</strong> and <strong>voluntarily given each one up</strong>, they are ineligible to own another business for <strong>90 days</strong>.</li><li>After 90 days, a new application is subject to all current eligibility and training requirements.</li></ul></article>
-<article class="rule"><h3>08 · Property & Ranch Reminders</h3><ul><li>Properties are first come, first served; have funds available when applying.</li><li>Property reservations are not accepted.</li><li>Ranch add-ons cost <strong>35% of the property cost</strong> and require a ranch-suitable property and approval.</li><li><strong>Ranches are considered businesses</strong> and are subject to applicable business ownership rules, including the one-business-per-character limit and multijob guidelines.</li></ul></article>
+<article class="rule"><h3>06 · Private Business Sales &amp; Transfers</h3><ul><li>Owners <strong>may privately sell</strong> a business to another player.</li><li>The price of the business itself <strong>cannot exceed its current official listing price</strong>.</li><li>Inventory may be sold separately for an additional agreed-upon amount.</li><li><strong>Every sale must go through the SRC Business Real Estate Office.</strong></li><li>The new owner must be approved by the office and meet applicable ownership requirements.</li><li>The selling owner must hire the prospective buyer and allow them to work at the business for <strong>at least 8 hours</strong> before the transfer. These hours can count toward the one-week profession-training requirement if properly completed and verified.</li><li><strong>An SRC representative must be present on the day of the sale</strong> to oversee and finalize the transfer.</li><li>No private handover or agreement is official until approved and recorded by the office.</li></ul></article>
+<article class="rule"><h3>07 · Changing Businesses &amp; the Three-Business Rule</h3><ul><li>New owners must remain at their establishment for at least <strong>two weeks</strong> before requesting relocation or a change of business.</li><li>Business changes require office approval; the county buyback remains 50% of the original purchase price and the new business is purchased at full price.</li><li>If a player has owned <strong>three different businesses</strong> and <strong>voluntarily given each one up</strong>, they are ineligible to own another business for <strong>90 days</strong>.</li><li>After 90 days, a new application is subject to all current eligibility and training requirements.</li></ul></article>
+<article class="rule"><h3>08 · Property &amp; Ranch Reminders</h3><ul><li>Properties are first come, first served; have funds available when applying.</li><li>Property reservations are not accepted.</li><li>Ranch add-ons cost <strong>35% of the property cost</strong> and require a ranch-suitable property and approval.</li><li><strong>Ranches are considered businesses</strong> and are subject to applicable business ownership rules, including the one-business-per-character limit and multijob guidelines.</li></ul></article>
 </div></section>
-<section id="contact"><h2>Contact the Real Estate Office</h2><p class="intro">Questions about a listing, training, business ownership, absences, or a sale? Open a ticket and communicate with the office before making arrangements.</p><p style="text-align:center"><a class="btn" href="https://discord.com/channels/1248752819776000171/1520447617165951188" target="_blank" rel="noopener noreferrer">Open Business Real Estate Discord</a></p><p class="small muted" style="text-align:center">County management retains responsibility for reviewing applications, approving transfers, and enforcing business regulations.</p></section></main><footer>© Saddle Ridge County · Business Real Estate Office · Est. 1895</footer>
+</div>
+</main>
+<footer>
+<div class="footer-title">
+    Saddle Ridge County
+  </div>
+<div class="footer-copy">
+    Business Real Estate Office
+    <br/>
+    Official County Business Listings
+  </div>
+</footer>
 <script>
-const CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTpSMKuT-JCXrFdXOQYtwG8ETzM8zP5FElBoIKxHc7l1KGScCKMeSL64_4VC_SrCRPmvWYtPRwcxzYc/pub?gid=0&single=true&output=csv';
-function parseCSV(t){let rows=[],row=[],cell='',q=false;for(let i=0;i<t.length;i++){let c=t[i];if(c==='"'){if(q&&t[i+1]==='"'){cell+='"';i++}else q=!q}else if(c===','&&!q){row.push(cell);cell=''}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&t[i+1]==='\n')i++;row.push(cell);if(row.some(x=>x.trim()))rows.push(row);row=[];cell=''}else cell+=c}row.push(cell);if(row.some(x=>x.trim()))rows.push(row);return rows}
-let listings=[];const els={town:document.querySelector('#town'),status:document.querySelector('#status'),search:document.querySelector('#search'),out:document.querySelector('#properties'),msg:document.querySelector('#listingStatus')};
-function clean(s){return String(s??'').trim()}function make(tag,cls,content){let el=document.createElement(tag);if(cls)el.className=cls;if(content!=null)el.textContent=content;return el}
-function render(){const town=els.town.value.toLowerCase(),status=els.status.value,query=els.search.value.toLowerCase();const subset=listings.filter(x=>(!town||x.town.toLowerCase()===town)&&(!status||(status==='available'?/available|for sale|open/i.test(x.status):!/available|for sale|open/i.test(x.status)))&&(!query||(x.town+' '+x.business+' '+x.notes).toLowerCase().includes(query)));els.out.replaceChildren();els.msg.textContent=`Showing ${subset.length} of ${listings.length} businesses`;if(!subset.length){els.out.append(make('p','intro','No matching businesses. Try another filter.'));return}for(let x of subset){let card=make('article','property'),tag=make('span','tag '+(/available|for sale|open/i.test(x.status)?'':'unavailable'),x.status||'Status not listed');card.append(tag,make('h3','',x.business||'Business'));let dl=make('dl');for(let [k,v] of [['Town',x.town],['Price',x.price],['Tax',x.tax]])if(v){dl.append(make('dt','',k),make('dd','',v))}card.append(dl);if(x.notes)card.append(make('p','small',x.notes));els.out.append(card)}}
-async function load(){try{let res=await fetch(CSV,{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);let rows=parseCSV(await res.text());if(rows.length<2)throw Error('No listing rows');let headers=rows.shift().map(x=>x.toLowerCase().trim());const get=(r,key)=>clean(r[headers.indexOf(key)]);listings=rows.map(r=>({town:get(r,'town'),business:get(r,'business'),price:get(r,'price'),tax:get(r,'tax'),status:get(r,'status'),notes:get(r,'notes')})).filter(x=>x.business);if(!listings.length)throw Error('No business listings');for(let town of [...new Set(listings.map(x=>x.town).filter(Boolean))].sort()){let o=document.createElement('option');o.value=town;o.textContent=town;els.town.append(o)}render()}catch(e){els.msg.textContent='Business listings could not be loaded right now. Please try again later or contact the Real Estate Office.';console.warn('Listings:',e)}}for(let el of [els.town,els.status,els.search])el.addEventListener('input',render);load();
-</script></body></html>
+
+/* GOOGLE SHEET */
+
+const sheetURL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vTpSMKuT-JCXrFdXOQYtwG8ETzM8zP5FElBoIKxHc7l1KGScCKMeSL64_4VC_SrCRPmvWYtPRwcxzYc/pub?gid=0&single=true&output=csv";
+
+
+/* TOWN LOGOS */
+
+const townLogos = {
+
+  "Blackwater": "Blackwater.png",
+  "Valentine": "Valentine.png",
+  "Strawberry": "Strawberry.png",
+  "Rhodes": "Rhodes.png",
+  "Armadillo": "Armadillo.png",
+  "St. Denis": "St-Denis.png",
+  "Saint Denis": "St-Denis.png",
+  "Annesburg": "Annesburg.png",
+  "Tumbleweed": "Tumbleweed.png"
+
+};
+
+
+/* CSV PARSER */
+
+function parseCSV(text) {
+
+  const rows = [];
+
+  let row = [];
+  let cell = "";
+  let quoted = false;
+
+  for (let i = 0; i < text.length; i++) {
+
+    const char = text[i];
+    const next = text[i + 1];
+
+    if (char === '"' && quoted && next === '"') {
+
+      cell += '"';
+      i++;
+
+    }
+
+    else if (char === '"') {
+
+      quoted = !quoted;
+
+    }
+
+    else if (char === "," && !quoted) {
+
+      row.push(cell);
+      cell = "";
+
+    }
+
+    else if ((char === "\n" || char === "\r") && !quoted) {
+
+      if (char === "\r" && next === "\n") {
+        i++;
+      }
+
+      row.push(cell);
+
+      if (row.some(value => value.trim() !== "")) {
+        rows.push(row);
+      }
+
+      row = [];
+      cell = "";
+
+    }
+
+    else {
+
+      cell += char;
+
+    }
+
+  }
+
+  if (cell.length || row.length) {
+
+    row.push(cell);
+
+    if (row.some(value => value.trim() !== "")) {
+      rows.push(row);
+    }
+
+  }
+
+  return rows;
+
+}
+
+
+/* STATUS */
+
+function getStatusClass(status) {
+
+  const normalized =
+    status.trim().toUpperCase();
+
+  if (normalized === "AVAILABLE") {
+    return "available";
+  }
+
+  if (normalized === "SOLD") {
+    return "sold";
+  }
+
+  return "coming-soon";
+
+}
+
+
+/* LOAD DATA */
+
+async function loadListings() {
+
+  try {
+
+    const response =
+      await fetch(sheetURL);
+
+    if (!response.ok) {
+
+      throw new Error(
+        "Could not load listing data."
+      );
+
+    }
+
+    const csv =
+      await response.text();
+
+    const rows =
+      parseCSV(csv);
+
+    if (rows.length < 2) {
+
+      throw new Error(
+        "No listing data found."
+      );
+
+    }
+
+    const headers =
+      rows[0].map(value => value.trim());
+
+    const townIndex =
+      headers.indexOf("Town");
+
+    const businessIndex =
+      headers.indexOf("Business");
+
+    const labelIndex =
+      headers.indexOf("Label");
+
+    const priceIndex =
+      headers.indexOf("Price");
+
+    const taxIndex =
+      headers.indexOf("Tax");
+
+    const statusIndex =
+      headers.indexOf("Status");
+
+    const notesIndex =
+      headers.indexOf("Notes");
+
+    const imageIndex =
+      headers.indexOf("Image");
+
+
+    const towns = {};
+
+    const statusTotals = {
+      AVAILABLE: 0,
+      "COMING SOON": 0,
+      SOLD: 0
+    };
+
+
+    rows.slice(1).forEach(row => {
+
+      const town =
+        row[townIndex]?.trim();
+
+      const business =
+        row[businessIndex]?.trim();
+
+      if (!town || !business) {
+        return;
+      }
+
+
+      const listing = {
+
+        town,
+
+        business,
+
+        label:
+          row[labelIndex]?.trim() || "",
+
+        price:
+          row[priceIndex]?.trim() || "",
+
+        tax:
+          row[taxIndex]?.trim() || "",
+
+        status:
+          (
+            row[statusIndex]?.trim() ||
+            "AVAILABLE"
+          ).toUpperCase(),
+
+        notes:
+          row[notesIndex]?.trim() || "",
+
+        image:
+          imageIndex >= 0
+            ? row[imageIndex]?.trim() || ""
+            : ""
+
+      };
+
+
+      if (!towns[town]) {
+        towns[town] = [];
+      }
+
+      towns[town].push(listing);
+
+
+      if (statusTotals[listing.status] !== undefined) {
+        statusTotals[listing.status]++;
+      }
+
+    });
+
+
+    renderSummary(statusTotals);
+
+    renderTowns(towns);
+
+
+    document
+      .getElementById("loading")
+      .style.display = "none";
+
+
+    document
+      .getElementById("content")
+      .style.display = "block";
+
+
+    setupFilters();
+
+  }
+
+  catch(error) {
+
+    console.error(error);
+
+    document
+      .getElementById("loading")
+      .innerHTML =
+        '<div id="error">The County Real Estate Ledger could not be opened at this time.</div>';
+
+  }
+
+}
+
+
+/* SUMMARY */
+
+function renderSummary(totals) {
+
+  document
+    .getElementById("availableCount")
+    .textContent =
+      totals.AVAILABLE || 0;
+
+  document
+    .getElementById("comingSoonCount")
+    .textContent =
+      totals["COMING SOON"] || 0;
+
+  document
+    .getElementById("soldCount")
+    .textContent =
+      totals.SOLD || 0;
+
+}
+
+
+/* TOWNS */
+
+function renderTowns(towns) {
+
+  const container =
+    document.getElementById("townListings");
+
+  container.innerHTML = "";
+
+
+  Object.entries(towns).forEach(
+    ([townName, listings]) => {
+
+      const section =
+        document.createElement("section");
+
+      section.className = "town";
+
+      section.id =
+        townName === "St. Denis" ||
+        townName === "Saint Denis"
+          ? "St-Denis"
+          : townName;
+
+
+      const header =
+        document.createElement("div");
+
+      header.className = "town-header";
+
+
+      const logoName =
+        townLogos[townName];
+
+
+      if (logoName) {
+
+        const logo =
+          document.createElement("img");
+
+        logo.className = "town-logo";
+
+        logo.src =
+          "images/" + logoName;
+
+        logo.alt =
+          townName + " Business Real Estate";
+
+        logo.onerror =
+          function() {
+            this.classList.add("hidden");
+          };
+
+        header.appendChild(logo);
+
+      }
+
+
+      const title =
+        document.createElement("h2");
+
+      title.className = "town-title";
+
+      title.textContent = townName;
+
+      header.appendChild(title);
+
+
+      const subtitle =
+        document.createElement("div");
+
+      subtitle.className = "town-subtitle";
+
+      subtitle.textContent =
+        "Business Real Estate Listings";
+
+      header.appendChild(subtitle);
+
+
+      const rule =
+        document.createElement("hr");
+
+      rule.className = "town-rule";
+
+      header.appendChild(rule);
+
+
+      section.appendChild(header);
+
+
+      const grid =
+        document.createElement("div");
+
+      grid.className = "listings";
+
+
+      listings.forEach(listing => {
+
+        grid.appendChild(
+          createListingCard(listing)
+        );
+
+      });
+
+
+      section.appendChild(grid);
+
+      container.appendChild(section);
+
+    }
+  );
+
+}
+
+
+/* LISTING CARD */
+
+function createListingCard(listing) {
+
+  const card =
+    document.createElement("article");
+
+  card.className = "listing";
+
+  card.dataset.status =
+    listing.status;
+
+
+  const status =
+    document.createElement("div");
+
+  status.className =
+    "status " +
+    getStatusClass(listing.status);
+
+  status.textContent =
+    listing.status;
+
+  card.appendChild(status);
+
+
+  if (listing.image) {
+
+    const image =
+      document.createElement("img");
+
+    image.className =
+      "business-image";
+
+    image.src =
+      "images/" +
+      encodeURIComponent(listing.image)
+        .replace(/%2F/g, "/");
+
+    image.alt =
+      listing.business;
+
+    image.loading =
+      "lazy";
+
+    image.onerror =
+      function() {
+        this.style.display = "none";
+      };
+
+    card.appendChild(image);
+
+  }
+
+
+  const title =
+    document.createElement("h3");
+
+  title.textContent =
+    listing.business;
+
+  card.appendChild(title);
+
+
+  const town =
+    document.createElement("div");
+
+  town.className =
+    "listing-town";
+
+  town.textContent =
+    listing.town;
+
+  card.appendChild(town);
+
+
+  card.appendChild(
+    createMoneyRow(
+      "Purchase Price",
+      listing.price
+    )
+  );
+
+
+  card.appendChild(
+    createMoneyRow(
+      "Monthly Tax",
+      listing.tax
+    )
+  );
+
+
+  if (listing.notes) {
+
+    const note =
+      document.createElement("div");
+
+    note.className =
+      "notes";
+
+    note.textContent =
+      listing.notes;
+
+    card.appendChild(note);
+
+  }
+
+
+  if (listing.label) {
+
+    const code =
+      document.createElement("div");
+
+    code.className =
+      "label-code";
+
+    code.textContent =
+      "County Record: " +
+      listing.label;
+
+    card.appendChild(code);
+
+  }
+
+
+  return card;
+
+}
+
+
+/* MONEY ROW */
+
+function createMoneyRow(label, value) {
+
+  const row =
+    document.createElement("div");
+
+  row.className =
+    "money-row";
+
+
+  const labelElement =
+    document.createElement("span");
+
+  labelElement.className =
+    "money-label";
+
+  labelElement.textContent =
+    label;
+
+
+  const valueElement =
+    document.createElement("span");
+
+  valueElement.className =
+    "money-value";
+
+  valueElement.textContent =
+    value || "—";
+
+
+  row.appendChild(labelElement);
+
+  row.appendChild(valueElement);
+
+
+  return row;
+
+}
+
+
+/* FILTERS */
+
+function setupFilters() {
+
+  const buttons =
+    document.querySelectorAll(
+      ".filter-button"
+    );
+
+
+  buttons.forEach(button => {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        buttons.forEach(item =>
+          item.classList.remove("active")
+        );
+
+        this.classList.add("active");
+
+        const filter =
+          this.dataset.filter;
+
+        const cards =
+          document.querySelectorAll(
+            ".listing"
+          );
+
+
+        cards.forEach(card => {
+
+          if (filter === "ALL") {
+
+            card.style.display =
+              "flex";
+
+          }
+
+          else {
+
+            card.style.display =
+              card.dataset.status === filter
+                ? "flex"
+                : "none";
+
+          }
+
+        });
+
+
+        document
+          .querySelectorAll(".town")
+          .forEach(town => {
+
+            const visible =
+              Array.from(
+                town.querySelectorAll(".listing")
+              )
+              .some(
+                card =>
+                  card.style.display !== "none"
+              );
+
+            town.style.display =
+              visible
+                ? "block"
+                : "none";
+
+          });
+
+      }
+    );
+
+  });
+
+}
+
+
+/* Show policies independently of Google Sheet availability. */
+document.getElementById("content").style.display = "block";
+/* START */
+
+loadListings();
+
+</script>
+</body>
+</html>
